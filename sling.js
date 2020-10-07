@@ -1,4 +1,4 @@
-    class Slingshot{
+ class Slingshot{
     constructor(bodyA, pointB){
     var options = {
     bodyA: bodyA,
@@ -10,6 +10,10 @@
     this.sling = Constraint.create(options);
     World.add(world, this.sling);
  }
+
+ attached(body) {
+   this.sling.bodyA = this.polygon;
+}
 
   fly(){
 
